@@ -11,9 +11,9 @@ fun main(args: Array<String>) {
 
     val average = calculateAverageScore(students)
 
-    val aboveAverage = students.filter { it.score > average }.size
+    val aboveAverage = students.count { it.score > average }
 
-    val belowAverage = students.filter { it.score < average }.size
+    val belowAverage = students.count { it.score < average }
 
     println("With an average of $average, there are $aboveAverage students above average and $belowAverage below it.")
 }
