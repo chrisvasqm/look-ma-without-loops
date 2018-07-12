@@ -10,6 +10,8 @@ fun main(args: Array<String>) {
     )
 
     val average = calculateAverageScore(students)
+
+    val aboveAverage = students.filter { it.score > average }.size
 }
 
 private fun calculateAverageScore(students: Array<Student>) = students.sumBy { it.score } / students.size
