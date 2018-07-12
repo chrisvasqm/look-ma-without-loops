@@ -8,4 +8,8 @@ fun main(args: Array<String>) {
             Student("Carl", 74),
             Student("Katherine", 86)
     )
+
+    val average = calculateAverageScore(students)
 }
+
+private fun calculateAverageScore(students: Array<Student>) = students.sumBy { it.score } / students.size
